@@ -72,6 +72,7 @@ li {
 body {
   background: var(--dark-background);
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -81,7 +82,7 @@ body {
 }
 
 .headline {
-  font-size: var(--title);
+  font-size: var(--headline);
   color: var(--light-text);
   font-weight: 500;
 }
@@ -124,13 +125,16 @@ body {
   cursor: pointer;
 }
 
+.button.__blue{
+  background: var(--primary-color);
+  border: none;
+}
+
 /*=========== HEADER =============*/
 
 .header {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
 }
 
 .content {
@@ -161,7 +165,7 @@ body {
 .menu {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: var(--background-menu-color);
@@ -187,7 +191,7 @@ body {
   padding: 4.5rem ;
   transform: translateX(100%);
   transition: var(--menu-transition);
-
+  z-index: 100000;
 }
 
 .menu.active .menu-links{
@@ -206,4 +210,69 @@ body {
   font-size: 1.5rem;
   color: var(--light-text);
   cursor: pointer;
+}
+
+/*========== HERO ===================*/
+
+.hero {
+  min-height: calc(100vh - var(--header-height));
+  padding: 5.7rem 0 45.3rem;
+  background-image: url('../img/screens.png');
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center 58rem;
+  position: relative;
+  z-index: -99999;
+}
+
+.hero::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32.8rem;
+  background: linear-gradient(180deg, rgba(30, 30, 30, 0) 0%, #0E0E0E 100%);
+}
+
+.hero-title {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 8.5rem;
+}
+
+.hero-content .headline {
+  line-height: 6.2rem;
+  margin-bottom: 1.7rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.1rem;
+}
+
+.hero-buttons .button {
+  width: 12.3rem;
+  height: 5.5rem;
+}
+
+/*============ BREAKPOINTS ===================*/
+@media only screen and (max-width: 750px) {
+  
+  .headline {
+    font-size: 5.2rem;
+    font-weight: 400;
+    line-height: 6.2rem;
+  }
+
+  /*========== HERO ===========*/
+  .hero-title {
+    max-width: 50rem;
+    padding: 0 1.5rem;
+  }  
+
 }
