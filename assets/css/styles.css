@@ -102,6 +102,7 @@ body {
   font-weight: 400;
   color: var(--light-text);
   text-align: center;
+  margin-bottom: 4.4rem;
 }
 
 .sub-title {
@@ -146,7 +147,7 @@ body {
   cursor: pointer;
 }
 
-.button.__blue{
+.button._blue{
   background: var(--primary-color);
   border: none;
 }
@@ -155,6 +156,7 @@ body {
 
 .header {
   width: 100%;
+  padding: 0 2.4rem;
   margin: 0 auto;
 }
 
@@ -293,11 +295,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 4.7rem;
-  padding: 0 3.65rem;
 }
 
 .feature-image {
-  width: 32.4rem;
   margin: 0 auto;
 }
 
@@ -321,11 +321,53 @@ body {
   margin-right: 0.8rem;
 }
 
+/*============ CONTENTS ======================*/
+
+.contents-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+  padding: 0 2.05rem;
+}
+
+.card {
+  background: var(--light);
+  padding: 4rem 2.548rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.card-title {
+  margin-bottom: 5.7rem;
+}
+
+.card-title .title {
+  text-align: center;
+  color: var(--first-text);
+  margin-bottom: 2rem;
+}
+
+.card-title .paragraphe {
+  color: var(--second-text);
+}
+
+.card .button {
+  margin: 0 auto;
+  width: 10rem;
+  height: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+
 
 /*============ BREAKPOINTS ===================*/
 
 @media only screen and (max-width: 750px) {
   
+  .container {
+    padding: 0 8rem;
+  }
+
   .headline {
     font-size: 5.2rem;
     font-weight: 400;
