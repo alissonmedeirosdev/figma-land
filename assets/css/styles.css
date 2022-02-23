@@ -45,7 +45,7 @@ li {
   /*============== TEXT ============*/
 
   --headline: 8rem;
-  --second-headline: 6.2rem;
+  --second-headline: 5.2rem;
   --title: 2rem;
   --sub-heading: 2rem;
   --text-button: 1rem;
@@ -87,6 +87,23 @@ body {
   font-weight: 500;
 }
 
+.second-headline {
+  font-size: var(--second-headline);
+  color: var(--light-text);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.7rem;
+}
+
+.sub-heading {
+  font-size: var(--sub-heading);
+  line-height: 3rem;
+  font-weight: 400;
+  color: var(--light-text);
+  text-align: center;
+}
+
 .sub-title {
   font-size: var(--second-headline);
   text-transform: uppercase;
@@ -110,6 +127,10 @@ body {
   color: var(--light-text);
   font-size: var(--link);
   font-weight: 400; 
+}
+
+.section {
+  padding: 16.3rem 0 6.2rem;
 }
 
 .button {
@@ -172,6 +193,7 @@ body {
   transition: var(--menu-transition);
   visibility: hidden;
   opacity: 0;
+  z-index: 99999;
 }
 
 .menu.active {
@@ -215,14 +237,13 @@ body {
 /*========== HERO ===================*/
 
 .hero {
-  min-height: calc(100vh - var(--header-height));
-  padding: 5.7rem 0 45.3rem;
+  height: calc(100vh - var(--header-height));
+  padding: 5.7rem 0 15.3rem;
   background-image: url('../img/screens.png');
-  /* background-size: cover; */
   background-repeat: no-repeat;
-  background-position: center 58rem;
+  background-position: center 45rem;
   position: relative;
-  z-index: -99999;
+  z-index: 1;
 }
 
 .hero::after {
@@ -239,11 +260,12 @@ body {
 .hero-title {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 8.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero-content .headline {
-  line-height: 6.2rem;
+  font-size: 5rem;
+  line-height: 4rem;
   margin-bottom: 1.7rem;
 }
 
@@ -252,7 +274,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.1rem;
+  gap: 1.5rem;
 }
 
 .hero-buttons .button {
@@ -260,7 +282,48 @@ body {
   height: 5.5rem;
 }
 
+/*=========== FEATURES ============*/
+
+.section-title {
+  margin-bottom: 2.7rem;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.7rem;
+  padding: 0 3.65rem;
+}
+
+.feature-image {
+  width: 32.4rem;
+  margin: 0 auto;
+}
+
+
+.features-infos {
+  max-width: 26.9rem;
+}
+
+.info + .info {
+  margin-top: 4rem;
+}
+
+.info-header{
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+}
+
+.info-icon {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-right: 0.8rem;
+}
+
+
 /*============ BREAKPOINTS ===================*/
+
 @media only screen and (max-width: 750px) {
   
   .headline {
@@ -270,6 +333,16 @@ body {
   }
 
   /*========== HERO ===========*/
+
+  .hero {
+    background-position: center 42rem;
+  }
+
+  .hero::after {
+    height: 15rem;
+    z-index: -9999;
+  }
+
   .hero-title {
     max-width: 50rem;
     padding: 0 1.5rem;
