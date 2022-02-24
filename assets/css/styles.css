@@ -142,6 +142,10 @@ body {
   font-weight: 400; 
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .section {
   padding: 6rem 0 6.2rem;
 }
@@ -452,6 +456,37 @@ body {
 
 .cta .button {
   margin-bottom: 10rem;
+}
+
+/*============ FOOTER =========================*/
+
+.footer-category {
+  margin-bottom: 7.5rem;
+}
+
+.category-title {
+  margin-bottom: 4rem;
+}
+
+.infos-list .info {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.infos-list .icon {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.infos-list .paragraphe {
+  display: inline;
+}
+
+
+.social-media {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
 }
 
 /*============ BREAKPOINTS ===================*/
