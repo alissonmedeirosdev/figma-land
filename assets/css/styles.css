@@ -81,6 +81,11 @@ body {
   margin: 0 auto;
 }
 
+.section-title {
+  max-width: 30rem;
+  margin: 0 auto 2.7rem;
+}
+
 .headline {
   font-size: var(--headline);
   color: var(--light-text);
@@ -90,10 +95,13 @@ body {
 .second-headline {
   font-size: var(--second-headline);
   color: var(--light-text);
-  text-transform: uppercase;
   font-weight: 400;
   text-align: center;
   margin-bottom: 2.7rem;
+}
+
+.second-headline._uppercase {
+  text-transform: uppercase;
 }
 
 .sub-heading {
@@ -286,10 +294,6 @@ body {
 
 /*=========== FEATURES ============*/
 
-.section-title {
-  margin-bottom: 2.7rem;
-}
-
 .info-content {
   display: flex;
   flex-direction: column;
@@ -335,6 +339,7 @@ body {
   padding: 4rem 2.548rem;
   text-align: center;
   border-radius: 1rem;
+  box-shadow: var(--shadow);
 }
 
 .card-title {
@@ -358,14 +363,35 @@ body {
   margin-bottom: 3rem;
 }
 
+/*============ GALLERY ===================*/
 
+.gallery-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.3rem;
+  margin-bottom: 4.4rem;
+
+}
+
+.gallery-imagens .image{
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.gallery .button {
+  margin: 0 auto;
+  width: 14.5rem;
+  height: 4.5rem;
+  font-size: 1.4rem;
+}
 
 /*============ BREAKPOINTS ===================*/
 
 @media only screen and (max-width: 750px) {
   
   .container {
-    padding: 0 8rem;
+    padding: 0 4,5rem;
   }
 
   .headline {
