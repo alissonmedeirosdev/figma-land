@@ -155,6 +155,13 @@ body {
   cursor: pointer;
 }
 
+.button._section {
+  margin: 0 auto;
+  width: 14.5rem;
+  height: 4.5rem;
+  font-size: 1.4rem;
+}
+
 .button._blue{
   background: var(--primary-color);
   border: none;
@@ -379,11 +386,19 @@ body {
   box-shadow: var(--shadow);
 }
 
-.gallery .button {
-  margin: 0 auto;
-  width: 14.5rem;
-  height: 4.5rem;
-  font-size: 1.4rem;
+/*============ PARTNERS ===================*/
+
+.partners-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.partners-images .image {
+  width: 5rem;
+  height: 5rem;
 }
 
 /*============ BREAKPOINTS ===================*/
