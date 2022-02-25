@@ -40,6 +40,7 @@ li {
   --dark-background: #181818;
   --light-background: #FFF;
   --efect-color: #000;
+  --bacground-cta: #343434;
   --background-menu-color: rgba(24, 24, 24, 0.45);
 
   /*============== TEXT ============*/
@@ -289,8 +290,7 @@ body {
 }
 
 .hero-content .headline {
-  font-size: 5rem;
-  line-height: 4rem;
+  font-size: var(--headline);
   margin-bottom: 1.7rem;
 }
 
@@ -458,6 +458,11 @@ body {
   margin-bottom: 10rem;
 }
 
+.cta-image .image{
+  display: block;
+  margin: 0 auto;
+}
+
 /*============ FOOTER =========================*/
 
 .footer-category {
@@ -492,10 +497,6 @@ body {
 /*============ BREAKPOINTS ===================*/
 
 @media only screen and (max-width: 750px) {
-  
-  .container {
-    padding: 0 4,5rem;
-  }
 
   .headline {
     font-size: 5.2rem;
@@ -509,14 +510,160 @@ body {
     background-position: center 42rem;
   }
 
-  .hero::after {
-    height: 15rem;
-    z-index: -9999;
-  }
-
   .hero-title {
     max-width: 50rem;
     padding: 0 1.5rem;
   }  
 
+}
+
+/*=========== MOBILE ===========*/
+
+@media only screen and (min-width: 375px) {
+
+  :root {
+
+    --headline: 5rem;
+    --second-headline: 3.8rem;
+    --sub-heading: 1.6rem; 
+
+  }
+
+  .hero {
+    background-position: center 52rem;
+  }
+
+  .hero::after {
+    height: calc(100vh - 54.4rem);
+    z-index: -9999;
+  }
+
+  .headline {
+    line-height: calc(var(--headline) * 0.15rem);
+  }
+  .sub-heading {
+    line-height: 2.4rem;
+  }
+
+  .container {
+    padding: 0 3.5rem;
+  }
+
+}
+
+/*============= TABLET & DESKTOP ================*/
+
+@media only screen and (min-width: 744px) {
+
+  /*============ HEADER ==================*/
+
+  .menu {
+    position: static;
+    width: initial;
+    height: initial;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-links {
+    width: initial;
+    height: initial;
+    position: static;
+    background: none;
+    flex-direction: row;
+    transform: translateX(0);
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .menu-links .link {
+    margin-bottom: 0;
+  }
+
+  .btn-close, .btn-open {
+    display: none;
+  }
+
+
+  /*============ HERO ====================*/
+
+  .hero {
+    background-position: center 35rem;
+  }
+
+  .hero-content {
+    padding: 8.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+  }
+
+  
+
+  /*============ FEATURES ===============*/
+
+  .info-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /*============ CONTENTS ================*/
+
+  .contents-cards {
+    flex-direction: row;
+  }
+
+
+  /*============  TESTIMONIALS ===========*/
+
+  .testimony {
+    flex: 1 1 48%;
+  }
+
+  /*=============== CTA ==================*/
+
+  .cta .container {
+    background: var(--bacground-cta);
+    display: flex;
+    border-radius: 3.3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cta-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6.15rem;
+  }
+
+  .cta-left .second-headline{
+    text-align: left;
+  }
+
+  .cta-left .button {
+    margin: 0;
+  }
+
+  .cta-image {
+    position: absolute;
+    top: 5rem;
+    right: -4.6rem;
+  }
+
+  /*=============== FOOTER ===============*/
+  
+  .footer .container {
+    display: flex;
+    gap: 7.5rem;
+  }
+
+  .footer-category {
+    margin: 0;
+  }
+
+  .footer-infos {
+    margin-left: auto;
+  }
 }
